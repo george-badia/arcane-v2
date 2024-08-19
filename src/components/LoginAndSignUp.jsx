@@ -23,7 +23,7 @@ const LoginAndSignUp = () => {
         password,
       };
 
-      fetch("http://localhost:5000/users", {
+      fetch("https://json-arcane.onrender.com/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const LoginAndSignUp = () => {
         })
         .catch((error) => console.error("Error registering user:", error));
     } else {
-      fetch("http://localhost:5000/users")
+      fetch("https://json-arcane.onrender.com/users")
         .then((response) => response.json())
         .then((users) => {
           const user = users.find(
